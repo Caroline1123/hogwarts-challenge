@@ -1,0 +1,43 @@
+
+
+/* Style the header */
+header {
+    background-color: #333;
+    padding: 10px 20px;
+    display:flex;
+    width: 100vw;
+    justify-content: center;
+}
+
+/* Style the navigation bar */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Style the links inside the navigation bar */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Add a hover effect to the links */
+nav a:hover {
+    background-color: #555;
+}
+
+/* Style for smaller screens */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav a {
+        margin: 5px 0;
+    }
+}

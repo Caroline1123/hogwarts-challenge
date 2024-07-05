@@ -1,0 +1,22 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'hp-font';
+    src: url("./../harry-p-font/HarryP-MVZ6w.ttf") format('truetype');
+}
+
+
+body {
+    font-family: 'hp-font';
+    font-size : 30px;
+    font-weight: normal;
+    display:flex;
+    justify-content: center;
+    width: 100vw;
+    flex-direction: column;
+}
