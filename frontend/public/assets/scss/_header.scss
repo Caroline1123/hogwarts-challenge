@@ -2,21 +2,20 @@
 
 /* Style the header */
 header {
-    background-color:rgba(0,0,0,0.8);
-    padding: 10px 20px;
+    background-color:rgba(0,0,0,0.6);
     display:flex;
     width: 100vw;
-    justify-content: center;
+    box-sizing:border-box;
 }
 
 nav {
-    border: 1px solid rgba(255,255,255,0.6);
+    // border: 1px solid rgba(255,255,255,0.6);
     width : 100vw;
     display: flex;
-    padding: 5px;
-    justify-content: center;
+    padding: 15px 10px;
+    justify-content: right;
     align-items: center;
-    font-size: 40px;
+    font-size: 25px;
     position :relative;
 }
 
@@ -32,7 +31,9 @@ nav a {
 
 /* Add a hover effect to the links */
 nav a:hover {
-    background-color: #555;
+    // background-color: #555;
+    color : rgb(242, 182, 29);
+    transition: ease 0.6s;
 }
 
 /* Style for smaller screens */
@@ -49,6 +50,7 @@ nav a:hover {
 .brand  {
     position: fixed; 
     left: 5px;
+    top: 10px;
     max-height: 60px;
     max-width : 60px;
     filter: invert(1);
@@ -61,7 +63,6 @@ nav a:hover {
         background-color: transparent;
         // filter: invert(0.9);
         filter: invert(73%) sepia(32%) saturate(1131%) hue-rotate(355deg) brightness(101%) contrast(90%);
-
         transform: scale(106%);
         transition: ease 0.6s;
     }

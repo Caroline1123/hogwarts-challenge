@@ -7,13 +7,12 @@ const {
   getUserById,
 } = require("../controllers/userController");
 
-// Gets all the users
+// GET routes
 router.get("/", getUsers);
-// gets a single user based on their ID
 router.get("/:id", getUserById);
-// Logs in a user
+
+// POST routes
 router.post("/login", login);
-// Registers a user
 router.post("/", createUser);
 
 module.exports = router;

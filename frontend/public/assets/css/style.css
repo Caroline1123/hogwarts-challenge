@@ -14,9 +14,9 @@ body {
   font-size: 30px;
   font-weight: normal;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   width: 100vw;
-  flex-direction: column;
   background-image: url("./../images/gabriel-kraus-3X5ZhsDClY8-unsplash (1).jpg");
   background-size: cover;
   background-position: center;
@@ -24,21 +24,19 @@ body {
 
 /* Style the header */
 header {
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   width: 100vw;
-  justify-content: center;
+  box-sizing: border-box;
 }
 
 nav {
-  border: 1px solid rgba(255, 255, 255, 0.6);
   width: 100vw;
   display: flex;
-  padding: 5px;
-  justify-content: center;
+  padding: 15px 10px;
+  justify-content: right;
   align-items: center;
-  font-size: 40px;
+  font-size: 25px;
   position: relative;
 }
 
@@ -54,7 +52,8 @@ nav a {
 
 /* Add a hover effect to the links */
 nav a:hover {
-  background-color: #555;
+  color: rgb(242, 182, 29);
+  transition: ease 0.6s;
 }
 
 /* Style for smaller screens */
@@ -70,6 +69,7 @@ nav a:hover {
 .brand {
   position: fixed;
   left: 5px;
+  top: 10px;
   max-height: 60px;
   max-width: 60px;
   filter: invert(1);
@@ -90,32 +90,61 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  height: 50vh;
+  height: 70vh;
+}
+
+.welcome {
+  font-size: 60px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border: 2px solid white;
+  border-radius: 5px;
 }
 
 #signup-form, #login-form {
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid black;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 400px;
+  max-width: 100%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2vh;
-  border: 5px solid white;
-  padding: 20px;
-  width: 30%;
+  gap: 10px;
 }
 #signup-form h5, #login-form h5 {
-  font-size: 50px;
-  color: white;
+  color: #fff;
+  font-size: 40px;
+  margin-bottom: 20px;
   font-weight: 100;
 }
 #signup-form input, #login-form input {
-  padding: 8px 5px;
-  background-color: #555;
-  border-radius: 5px;
-  width: 90%;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #444; /* Darker border */
+  background-color: #444; /* Darker input background */
+  color: #ccc; /* Light text */
+  border-radius: 4px;
+  font-size: 16px;
+}
+#signup-form input::placeholder, #login-form input::placeholder {
+  color: #888; /* Light placeholder text */
 }
 #signup-form button, #login-form button {
-  padding: 15px;
-  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  background-color: #5bc0de; /* Button color */
+  border: none;
+  color: #fff; /* Button text color */
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+#signup-form button:hover, #login-form button:hover {
+  background-color: #31b0d5; /* Darker hover color */
 }/*# sourceMappingURL=style.css.map */
