@@ -2,18 +2,22 @@
 
 /* Style the header */
 header {
-    background-color: #333;
+    background-color:rgba(0,0,0,0.8);
     padding: 10px 20px;
     display:flex;
     width: 100vw;
     justify-content: center;
 }
 
-/* Style the navigation bar */
 nav {
+    border: 1px solid rgba(255,255,255,0.6);
+    width : 100vw;
     display: flex;
-    justify-content: flex-end;
+    padding: 5px;
+    justify-content: center;
     align-items: center;
+    font-size: 40px;
+    position :relative;
 }
 
 /* Style the links inside the navigation bar */
@@ -39,5 +43,26 @@ nav a:hover {
     }
     nav a {
         margin: 5px 0;
+    }
+}
+
+.brand  {
+    position: fixed; 
+    left: 5px;
+    max-height: 60px;
+    max-width : 60px;
+    filter: invert(1);
+    padding:0;
+    img {
+        height: 60px;
+        width : 60px;
+    }
+    &:hover {
+        background-color: transparent;
+        // filter: invert(0.9);
+        filter: invert(73%) sepia(32%) saturate(1131%) hue-rotate(355deg) brightness(101%) contrast(90%);
+
+        transform: scale(106%);
+        transition: ease 0.6s;
     }
 }

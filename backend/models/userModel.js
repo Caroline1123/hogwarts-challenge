@@ -4,11 +4,17 @@ const UserSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
+    unique: true,
   },
   email: {
     type: String,
     required: true,
     unique: true,
+  },
+  house: {
+    type: String,
+    required: true,
+    enum: ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"],
   },
   password: {
     type: String,

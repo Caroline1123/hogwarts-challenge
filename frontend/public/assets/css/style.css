@@ -17,22 +17,29 @@ body {
   justify-content: center;
   width: 100vw;
   flex-direction: column;
+  background-image: url("./../images/gabriel-kraus-3X5ZhsDClY8-unsplash (1).jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 /* Style the header */
 header {
-  background-color: #333;
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 10px 20px;
   display: flex;
   width: 100vw;
   justify-content: center;
 }
 
-/* Style the navigation bar */
 nav {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  width: 100vw;
   display: flex;
-  justify-content: flex-end;
+  padding: 5px;
+  justify-content: center;
   align-items: center;
+  font-size: 40px;
+  position: relative;
 }
 
 /* Style the links inside the navigation bar */
@@ -60,9 +67,55 @@ nav a:hover {
     margin: 5px 0;
   }
 }
+.brand {
+  position: fixed;
+  left: 5px;
+  max-height: 60px;
+  max-width: 60px;
+  filter: invert(1);
+  padding: 0;
+}
+.brand img {
+  height: 60px;
+  width: 60px;
+}
+.brand:hover {
+  background-color: transparent;
+  filter: invert(73%) sepia(32%) saturate(1131%) hue-rotate(355deg) brightness(101%) contrast(90%);
+  transform: scale(106%);
+  transition: ease 0.6s;
+}
+
 main {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 50vh;
+}
+
+#signup-form, #login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
+  border: 5px solid white;
+  padding: 20px;
+  width: 30%;
+}
+#signup-form h5, #login-form h5 {
+  font-size: 50px;
+  color: white;
+  font-weight: 100;
+}
+#signup-form input, #login-form input {
+  padding: 8px 5px;
+  background-color: #555;
+  border-radius: 5px;
+  width: 90%;
+}
+#signup-form button, #login-form button {
+  padding: 15px;
+  border-radius: 5px;
 }/*# sourceMappingURL=style.css.map */
