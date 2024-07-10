@@ -10,17 +10,16 @@
 <body>
     <header>
         <nav> 
-            <a class="brand" href="index.html"><img  src="./assets/images/harry-potter-logo.png"></a>
-            <a href="register.html">Register</a>
-            <a href="login.html">Log In</a>
         </nav>
     </header>
     <main>
-        <p class="welcome">Ugly Homepage</p>
-
+        <form id="post-form">
+            <input type="text" name="title" maxlength="20" placeholder="Title" required>
+            <textarea rows="5" name="content" maxlength="300" placeholder="Type your message here" required></textarea>
+            <button type="submit">Send</button>
+        </form>
     </main>
     <footer>
-
     </footer>
 </body>
 </html>

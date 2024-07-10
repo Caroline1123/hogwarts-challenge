@@ -1,12 +1,12 @@
-#signup-form, #login-form {
+#signup-form, #login-form, #post-form {
     padding: 20px;
     border-radius: 8px;
     border: 2px solid black;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(255, 255, 255, 0.5) 0px 2px 8px 0px;
     width: 400px;
     max-width: 100%;
     text-align: center;
-    background-color:(rgba(255,255,255,0.3));
+    background-color:(rgba(0,0,0,0.8));
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -15,35 +15,35 @@
         font-size: 40px;
         margin-bottom: 20px;
         font-weight: 100;
+        font-family: $title-font;
       }
-      input {
+      input, textarea {
         width: 100%;
         padding: 10px;
         margin-bottom: 15px;
-        border: 1px solid #444; /* Darker border */
-        background-color: #444; /* Darker input background */
-        color: #ccc; /* Light text */
+        border: 1px solid #444;
+        background-color: #444; 
+        color: #ccc;
         border-radius: 4px;
         font-size: 16px;
   
         &::placeholder {
-          color: #888; /* Light placeholder text */
+          color: #888;
         }
       }
-  
       button {
         width: 100%;
         padding: 10px;
-        background-color: #5bc0de; /* Button color */
+        background-color: rgb(54, 90, 143); 
         border: none;
-        color: #fff; /* Button text color */
+        color: #fff;
         cursor: pointer;
         border-radius: 4px;
         font-size: 16px;
         transition: background-color 0.3s ease;
   
         &:hover {
-          background-color: #31b0d5; /* Darker hover color */
+          background-color: #31b0d5;
         }
     }
 }

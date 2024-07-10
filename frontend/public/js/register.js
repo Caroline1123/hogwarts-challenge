@@ -1,5 +1,6 @@
 import { validateEmail, sanitizeInput } from "./utils/validate.js";
-import { login } from "./login.js";
+import { login } from "./log.js";
+import { sayWelcome, renderNav } from "./utils/display.js";
 
 const endpoint = "http://localhost:3000/api/users";
 
@@ -41,16 +42,14 @@ const register = (data) => {
           throw new Error(data.message);
         });
       }
-      return response.json();
-    })
-    .then((data) => {
-      console.log("User registered successfully:", data.message);
+      login(data, "registered");
+      renderNav();
+      setTimeout(sayWelcome(name, house), 5000);
     })
     .catch((error) => {
       console.error("Error during registration:", error.message);
       return;
     });
-  login(data);
 };
 
 export { register };

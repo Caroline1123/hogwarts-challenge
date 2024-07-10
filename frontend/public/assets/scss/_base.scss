@@ -1,25 +1,20 @@
-/* Reset some basic styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-@font-face {
-    font-family: 'hp-font';
-    src: url("./../harry-p-font/HarryP-MVZ6w.ttf") format('truetype');
-}
-
 
 body {
-    font-family: 'hp-font';
+    font-family: $text-font;
     font-size : 30px;
     font-weight: normal;
     display:flex;
     flex-direction: column;
     justify-content: center;
     width: 100vw;
-    background-image: url("./../images/gabriel-kraus-3X5ZhsDClY8-unsplash\ \(1\).jpg");
+    // background-image: url("./../images/gabriel-kraus-3X5ZhsDClY8-unsplash\ \(1\).jpg");
+    background-color: black;
     background-size: cover;
-    background-position:center;
+    background-position: center;
 }

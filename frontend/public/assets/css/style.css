@@ -1,23 +1,23 @@
-/* Reset some basic styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@font-face {
+  font-family: "hp-font";
+  src: url("./../harry-p-font/HarryP-MVZ6w.ttf") format("truetype");
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: "hp-font";
-  src: url("./../harry-p-font/HarryP-MVZ6w.ttf") format("truetype");
-}
 body {
-  font-family: "hp-font";
+  font-family: "Poppins", sans-serif;
   font-size: 30px;
   font-weight: normal;
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100vw;
-  background-image: url("./../images/gabriel-kraus-3X5ZhsDClY8-unsplash (1).jpg");
+  background-color: black;
   background-size: cover;
   background-position: center;
 }
@@ -28,6 +28,7 @@ header {
   display: flex;
   width: 100vw;
   box-sizing: border-box;
+  box-shadow: rgba(255, 255, 255, 0.5) 0px 2px 8px 0px;
 }
 
 nav {
@@ -48,6 +49,7 @@ nav a {
   padding: 10px 15px;
   border-radius: 5px;
   transition: background-color 0.3s;
+  font-family: "hp-font";
 }
 
 /* Add a hover effect to the links */
@@ -57,15 +59,6 @@ nav a:hover {
 }
 
 /* Style for smaller screens */
-@media (max-width: 600px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  nav a {
-    margin: 5px 0;
-  }
-}
 .brand {
   position: fixed;
   left: 5px;
@@ -93,6 +86,54 @@ main {
   height: 70vh;
 }
 
+#signup-form, #login-form, #post-form {
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid black;
+  box-shadow: rgba(255, 255, 255, 0.5) 0px 2px 8px 0px;
+  width: 400px;
+  max-width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#signup-form h5, #login-form h5, #post-form h5 {
+  color: #fff;
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-weight: 100;
+  font-family: "hp-font";
+}
+#signup-form input, #signup-form textarea, #login-form input, #login-form textarea, #post-form input, #post-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #444;
+  background-color: #444;
+  color: #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+#signup-form input::placeholder, #signup-form textarea::placeholder, #login-form input::placeholder, #login-form textarea::placeholder, #post-form input::placeholder, #post-form textarea::placeholder {
+  color: #888;
+}
+#signup-form button, #login-form button, #post-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(54, 90, 143);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+#signup-form button:hover, #login-form button:hover, #post-form button:hover {
+  background-color: #31b0d5;
+}
+
 .welcome {
   font-size: 60px;
   color: white;
@@ -102,49 +143,36 @@ main {
   border-radius: 5px;
 }
 
-#signup-form, #login-form {
-  padding: 20px;
-  border-radius: 8px;
-  border: 2px solid black;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  width: 400px;
-  max-width: 100%;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.3);
+.house-crest {
+  width: 200px;
+  height: 200px;
+}
+
+.house-sorting {
   display: flex;
   flex-direction: column;
+  font-size: 16px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 60%;
+  align-items: center;
   gap: 10px;
 }
-#signup-form h5, #login-form h5 {
-  color: #fff;
-  font-size: 40px;
-  margin-bottom: 20px;
-  font-weight: 100;
+.house-sorting .sorted {
+  text-align: center;
 }
-#signup-form input, #login-form input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #444; /* Darker border */
-  background-color: #444; /* Darker input background */
-  color: #ccc; /* Light text */
-  border-radius: 4px;
-  font-size: 16px;
+.house-sorting .sorted .student {
+  font-weight: bold;
 }
-#signup-form input::placeholder, #login-form input::placeholder {
-  color: #888; /* Light placeholder text */
+.house-sorting .sorted .hufflepuff {
+  color: yellow;
 }
-#signup-form button, #login-form button {
-  width: 100%;
-  padding: 10px;
-  background-color: #5bc0de; /* Button color */
-  border: none;
-  color: #fff; /* Button text color */
-  cursor: pointer;
-  border-radius: 4px;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
+.house-sorting .sorted .gryffindor {
+  color: red;
 }
-#signup-form button:hover, #login-form button:hover {
-  background-color: #31b0d5; /* Darker hover color */
+.house-sorting .sorted .slytherin {
+  color: darkgreen;
+}
+.house-sorting .sorted .ravenclaw {
+  color: rgb(74, 74, 173);
 }/*# sourceMappingURL=style.css.map */

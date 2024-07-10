@@ -1,0 +1,42 @@
+.welcome {
+    font-size : 60px;
+    color: white;
+    background-color: rgba(0,0,0,0.7);
+    padding: 5px 10px;
+    border : 2px solid white;
+    border-radius: 5px;
+}
+
+.house-crest {
+    width: 200px;
+    height: 200px;
+}
+
+.house-sorting {
+    display:flex;
+    flex-direction:column;
+    font-size: 16px;
+    color: white;
+    background-color: rgba(0,0,0,0.7);
+    width : 60%;
+    align-items:center;
+    gap:10px;
+    .sorted {
+        text-align: center;
+        .student {
+            font-weight: bold;
+        }
+        .hufflepuff {
+            color: yellow;
+        }
+        .gryffindor {
+            color: red;
+        }
+        .slytherin {
+            color: darkgreen;
+        }
+        .ravenclaw {
+            color: rgb(74, 74, 173);
+        }
+    }
+}
