@@ -4,14 +4,13 @@ const User = require("../models/userModel");
 const editMessage = async (req, res) => {
   const { id: messageId } = req.params;
   try {
-    const { title, content } = req.body;
+    const { content } = req.body;
     const result = await Message.updateOne(
       {
         _id: messageId,
       },
       {
         $set: {
-          title: title,
           content: content,
         },
       }
@@ -56,8 +55,8 @@ const getMessagesByHouse = async (req, res) => {
 };
 
 const createMessage = async (req, res) => {
-  const { title, content, creatorId } = req.body;
-  if (!title || !content || !creatorId) {
+  const { content, creatorId } = req.body;
+  if (!content || !creatorId) {
     return res
       .status(401)
       .json("Failed to send message, some information was missing.");
@@ -68,7 +67,7 @@ const createMessage = async (req, res) => {
         return res.status(400).json({ message: "Invalid creatorId" });
       }
 
-      let message = new Message({ title, content, creatorId });
+      let message = new Message({ content, creatorId });
       await message.save();
       return res.status(201).json({ message: "Message sent successfully" });
     } catch (err) {

@@ -1,6 +1,5 @@
 const closeSession = () => {
   localStorage.clear();
-  window.location.href = "lobby.html";
 };
 
 const startSession = (user) => {

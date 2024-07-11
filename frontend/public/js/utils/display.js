@@ -1,5 +1,4 @@
-import { logout } from "./../log.js";
-import { displayLobby } from "./../lobby.js";
+import { logout } from "./log.js";
 
 const renderNav = () => {
   const nav = document.querySelector("nav");

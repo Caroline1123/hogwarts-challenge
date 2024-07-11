@@ -1,4 +1,3 @@
-// const jwt = require("jsonwebtoken");
 const User = require("../models/userModel");
 const { hashPassword, comparePassword } = require("../utils/encrypt");
 
@@ -58,8 +57,6 @@ const login = async (req, res) => {
         id: foundUser.id,
       },
     };
-    // const token = jwt.sign(payload, "your_jwt_secret", { expiresIn: "1h" });
-    // Send response
     return res.status(200).json({ foundUser });
   } catch (err) {
     return res.status(500).send("Server Error");

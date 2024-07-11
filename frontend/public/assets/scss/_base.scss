@@ -11,10 +11,10 @@ body {
     font-weight: normal;
     display:flex;
     flex-direction: column;
-    justify-content: center;
     width: 100vw;
-    // background-image: url("./../images/gabriel-kraus-3X5ZhsDClY8-unsplash\ \(1\).jpg");
+    min-height: 100vh;
     background-color: black;
     background-size: cover;
     background-position: center;
+    position: relative;
 }
