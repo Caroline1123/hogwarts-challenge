@@ -14,7 +14,6 @@ const renderNav = () => {
 };
 
 const sayWelcome = (name, house) => {
-  console.log(`Hello ${name}. You have been assigned to house ${house}`);
   const main = document.querySelector("main");
   let welcomeMsg;
   switch (house) {

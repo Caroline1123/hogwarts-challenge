@@ -69,7 +69,7 @@ const editMessage = async (id, newText) => {
     }
     const data = await response.json();
     console.log("Message successfully updated");
-    location.reload();
+    displayLobby();
     return;
   } catch (error) {
     console.log(error.message);
@@ -105,10 +105,11 @@ const displayMessage = (message, userId, container) => {
 const displayLobby = async () => {
   const userId = retrieveSession();
   const lobby = document.querySelector(".lobby");
+  lobby.innerHTML = "";
   const user = await getUser(userId);
   let messages = await getHouseMessages(user.house);
   for (let message of messages) {
-    displayMessage(message, user._id, lobby, user.name);
+    displayMessage(message, user._id, lobby);
   }
   lobby.scrollTop = lobby.scrollHeight;
 };
@@ -131,8 +132,11 @@ const sendMessage = async (data) => {
       throw new Error(data.message);
     }
     const data = await response.json();
-    console.log("Message sent successfully");
-    location.reload();
+    // const textarea = document.getElementById("#content");
+    // textarea.textContent = "";
+    displayLobby();
+    const contentInput = document.querySelector("#content");
+    contentInput.value = "";
     return;
   } catch (err) {
     console.error("Message not sent:", err.message);
